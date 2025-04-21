@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 public class Test {
 
     static {
-        String url = "jdbc:mysql://localhost:3306/";
+        String url = "jdbc:mysql://rds-mysql-test.ukheshe.rocks:3306/";
         String user = "doesntmatter";
         String password = "doesntmatter";
 
