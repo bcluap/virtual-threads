@@ -24,8 +24,8 @@ public class MainClass {
             });
         }
 
-        Thread.sleep(5000);
-
+        Thread.sleep(2000);
+        System.out.println("doTest1: checking if virtual threads are still working...");
         Thread.ofVirtual().start(() -> {
             System.out.println("doTest1: Great, I was scheduled");
         }).join();
@@ -44,9 +44,10 @@ public class MainClass {
             });
         }
 
-        Thread.sleep(5000);
-
+        Thread.sleep(2000);
+        System.out.println("doTest2: checking if virtual threads are still working...");
         Thread.ofVirtual().start(() -> {
+            // Wont get here...
             System.out.println("doTest2: Great, I was scheduled");
         }).join();
     }
