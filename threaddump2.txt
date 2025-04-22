@@ -1,0 +1,128 @@
+70949
+2025-04-22T09:34:57.162716782Z
+24+36
+
+#3 "main"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:223)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:789)
+      java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1138)
+      java.base/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:230)
+      java.base/java.lang.VirtualThread.joinNanos(VirtualThread.java:998)
+      java.base/java.lang.Thread.join(Thread.java:1843)
+      java.base/java.lang.Thread.join(Thread.java:1936)
+      com.test.MainClass.main(MainClass.java:19)
+
+#6 "Reference Handler"
+      java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+      java.base/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+      java.base/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+#7 "Finalizer"
+      java.base/java.lang.Object.wait0(Native Method)
+      java.base/java.lang.Object.wait(Object.java:389)
+      java.base/java.lang.Object.wait(Object.java:351)
+      java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:138)
+      java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+      java.base/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:165)
+
+#8 "Signal Dispatcher"
+
+#13 "Notification Thread"
+
+#14 "Common-Cleaner"
+      java.base/java.lang.Object.wait0(Native Method)
+      java.base/java.lang.Object.wait(Object.java:389)
+      java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:124)
+      java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:215)
+      java.base/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+      java.base/java.lang.Thread.run(Thread.java:1447)
+      java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)
+
+#15 "VirtualThread-unblocker"
+      java.base/java.lang.VirtualThread.takeVirtualThreadListToUnblock(Native Method)
+      java.base/java.lang.VirtualThread.unblockVirtualThreads(VirtualThread.java:1489)
+      java.base/java.lang.Thread.run(Thread.java:1447)
+      java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)
+
+#19 "MasterPoller"
+      java.base/sun.nio.ch.EPoll.wait(Native Method)
+      java.base/sun.nio.ch.EPollPoller.poll(EPollPoller.java:74)
+      java.base/sun.nio.ch.Poller.pollerLoop(Poller.java:248)
+      java.base/java.lang.Thread.run(Thread.java:1447)
+      java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)
+
+#23 "Attach Listener"
+      java.base/java.lang.Thread.getStackTrace(Thread.java:2166)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThread(ThreadDumper.java:165)
+      java.base/jdk.internal.vm.ThreadDumper.lambda$dumpThreads$0(ThreadDumper.java:158)
+      java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+      java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+      java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+      java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+      java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+      java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+      java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:158)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:154)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreadsToFile(ThreadDumper.java:119)
+      java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:68)
+
+#22 "" virtual
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.lang.VirtualThread.parkOnCarrierThread(VirtualThread.java:821)
+      java.base/java.lang.VirtualThread.park(VirtualThread.java:759)
+      java.base/java.lang.System$1.parkVirtualThread(System.java:2279)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:367)
+      java.base/sun.nio.ch.Poller.poll(Poller.java:197)
+      java.base/sun.nio.ch.Poller.poll(Poller.java:144)
+      java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:174)
+      java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:200)
+      java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+      java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+      java.base/java.net.Socket.connect(Socket.java:665)
+      java.base/java.net.Socket.connect(Socket.java:603)
+      java.base/java.net.Socket.<init>(Socket.java:470)
+      java.base/java.net.Socket.<init>(Socket.java:276)
+      com.test.TestWithStaticInit.<clinit>(TestWithStaticInit.java:9)
+      com.test.MainClass.lambda$main$1(MainClass.java:17)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:466)
+
+#17 "ForkJoinPool-1-worker-1"
+      java.base/jdk.internal.vm.Continuation.run(Continuation.java:251)
+      java.base/java.lang.VirtualThread.runContinuation(VirtualThread.java:303)
+      java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1735)
+      java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1726)
+      java.base/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1650)
+      java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+      java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1394)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1970)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+#18 "ForkJoinPool-1-worker-2"
+      java.base/jdk.internal.misc.Unsafe.park(Native Method)
+      java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+      java.base/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+      java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+      java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+#20 "SubPoller-0" virtual
+      java.base/java.lang.VirtualThread.park(VirtualThread.java:746)
+      java.base/java.lang.System$1.parkVirtualThread(System.java:2279)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:367)
+      java.base/sun.nio.ch.Poller.poll(Poller.java:197)
+      java.base/sun.nio.ch.Poller.subPollerLoop(Poller.java:271)
+      java.base/sun.nio.ch.Poller$Pollers.lambda$start$2(Poller.java:366)
+      java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:291)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:466)
+
+#21 "SubPoller-1" virtual
+      java.base/java.lang.VirtualThread.park(VirtualThread.java:746)
+      java.base/java.lang.System$1.parkVirtualThread(System.java:2279)
+      java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:367)
+      java.base/sun.nio.ch.Poller.poll(Poller.java:197)
+      java.base/sun.nio.ch.Poller.subPollerLoop(Poller.java:271)
+      java.base/sun.nio.ch.Poller$Pollers.lambda$start$4(Poller.java:369)
+      java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:291)
+      java.base/java.lang.VirtualThread.run(VirtualThread.java:466)
+
