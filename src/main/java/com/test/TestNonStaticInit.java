@@ -1,6 +1,5 @@
 package com.test;
 
-import java.io.IOException;
 import java.net.Socket;
 
 public class TestNonStaticInit {
